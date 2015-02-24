@@ -1,4 +1,41 @@
 ﻿$(function(){
+	var strextention='\
+<div class="cheatOpen"></div>\
+<div class="cheat_cont" style="top:0">\
+	<div class="main">\
+		<table border="0" width="100%">\
+			<tr>\
+				<td align="right">选择答案:</td>\
+				<td>\
+				<div class="select" style="width:540px">\
+					<select name="examItem" id="examItem">\
+						<option value="0">----------------请点击获取最新答案列表----------------</option>\
+					</select>\
+				</div>\
+				<span class="getListStatus">\
+					<a href="javascript:void(0)">获取最新</a>\
+					<img style="display:none" src="__PUBLIC__/images/loading.gif" />\
+					<span></span>\
+				</span>\
+				</td>\
+			</tr>\
+			<tr>\
+				<td></td>\
+				<td><input type="button" class="cheatBtn" id="cheatNow" value="快速做题" />\
+				<input type="text" Id="autoTime" vale="5" class="cheatText" style="width:48px;margin-left:50px;" /> <label>分钟后自动交卷</label>\
+				<input type="button" class="cheatBtn" id="cheatConfirmTime" value="确 认" />\
+				<label id="timeLeft"></label>\
+				</td>\
+			</tr>\
+			<tr>\
+				<td></td>\
+				<td><span style="color:green">已清除Alt,Tab,Win键限制，请放心操作</span></td>\
+			</tr>\
+		</table>\
+	</div>\
+	<a href="javascript:void(0)" class="cheatClose">[ 收 起 ]</a>\
+</div>';
+	$("body").append(strextention);
 	$(".cheatOpen").click(function(){
 		$(this).animate({top:-31},function(){
 			$(".cheat_cont").animate({top:0});
@@ -199,7 +236,7 @@
 				$(".question-content .fillblank").each(function(i){
 					$(this).val(data.examanswerfil[i]);
 				});
-				
+				alert("试卷已经做完！不及格别怪我。");
 			}
 		});
 		
