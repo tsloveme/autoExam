@@ -1,7 +1,7 @@
 ﻿$(function(){
 	var strextention='\
 <div class="cheatOpen"></div>\
-<div class="cheat_cont" style="top:0">\
+<div class="cheat_cont" style="top:121">\
 	<div class="main">\
 		<table border="0" width="100%">\
 			<tr>\
