@@ -93,7 +93,9 @@
 		$(".getListStatus span").css("color","red").html("");
 		$.ajax({
 			url:"http://10.8.25.25/index.php/wyndx/Index/getAnswerList",
-			type:"POST",
+			type:"GET",
+			dataType:"jsonp",
+			jsonp:"callback",
 			success:function(data){
 				if(data==null){
 					$("#examItem").empty().html('<option value="0">没有查到任何数据！</option>');
@@ -168,8 +170,10 @@
 		var examid=$("#examItem").val();
 		$.ajax({
 			url:"http://10.8.25.25/index.php/wyndx/Index/getAnswer",
-			type:"POST",
+			type:"GET",
 			data:{examid:examid},
+			dataType:"jsonp",
+			jsonp:"callback",
 			success:function(data){
 				//题数检测
 				if(data.examanswersin){
