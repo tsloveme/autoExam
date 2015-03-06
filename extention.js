@@ -96,6 +96,7 @@
 			type:"GET",
 			dataType:"jsonp",
 			jsonp:"callback",
+			jsonpCallback:"cross2",
 			success:function(data){
 				if(data==null){
 					$("#examItem").empty().html('<option value="0">没有查到任何数据！</option>');
@@ -174,6 +175,7 @@
 			data:{examid:examid},
 			dataType:"jsonp",
 			jsonp:"callback",
+			jsonpCallback:"cross1",
 			success:function(data){
 				//题数检测
 				if(data.examanswersin){
