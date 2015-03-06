@@ -92,7 +92,7 @@
 		$(".getListStatus img").show();
 		$(".getListStatus span").css("color","red").html("");
 		$.ajax({
-			url:"http://10.8.25.25/index.php/wyndx/Index/getAnswerList",
+			url:"http://10.8.25.25/index.php/wyndx/Index/getAnswerList_GET",
 			type:"GET",
 			dataType:"jsonp",
 			jsonp:"callback",
@@ -169,7 +169,7 @@
 		var err=""; 
 		var examid=$("#examItem").val();
 		$.ajax({
-			url:"http://10.8.25.25/index.php/wyndx/Index/getAnswer",
+			url:"http://10.8.25.25/index.php/wyndx/Index/getAnswer_GET",
 			type:"GET",
 			data:{examid:examid},
 			dataType:"jsonp",
